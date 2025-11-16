@@ -1,0 +1,86 @@
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    background-color: #f2f3f6;
+}
+
+@media (max-width: 500px) {
+    .projects-container {
+        grid-template-columns: 1fr; /* single column on small screens */
+        padding: 1rem;
+        background-color: #f2f3f6;
+    }
+}
+
+
+.project-card {
+    /* background: #fff; */
+    background-color: #e8e8e8;
+    border: 2px solid #f8b400;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-header h2 {
+    font-size: 1.3rem;
+    color: #f8b400;
+    /* color: #111; */
+    font-weight: 700;
+}
+
+.project-desc {
+    margin: 0.8rem 0 1rem;
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    background-color: #ffc107;
+    color: #111;
+    font-weight: 600;
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+.bgcolor{
+    background-color: #f2f3f6;
+}
+
+.iconImg {
+    width: 2.3rem;          /* control the size — try 20–24px for small look */
+    height: 2.3rem;
+    object-fit: contain;  /* ensures correct aspect ratio */
+    margin-left: 1rem;     /* small spacing from title */
+    vertical-align: middle; /* aligns neatly with text */
+    cursor: pointer;      /* optional: makes it clickable */
+    transition: transform 0.2s ease-in-out;
+}
+
+.iconImg:hover {
+    transform: scale(1.1); /* subtle hover effect */
+}

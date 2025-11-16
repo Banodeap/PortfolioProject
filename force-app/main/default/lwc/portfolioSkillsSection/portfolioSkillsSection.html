@@ -1,0 +1,16 @@
+<template>
+    <div class="skills-container">
+        <template for:each={groupedSkills} for:item="section">
+            <section key={section.title} class="skill-section">
+                <h2>{section.title}</h2>
+
+                <!-- Wrap all skills in one flex container -->
+                <div class="skill-tags">
+                    <template for:each={section.subtitles} for:item="skill">
+                        <span key={skill} class="skill-tag">{skill}</span>
+                    </template>
+                </div>
+            </section>
+        </template>
+    </div>
+</template>

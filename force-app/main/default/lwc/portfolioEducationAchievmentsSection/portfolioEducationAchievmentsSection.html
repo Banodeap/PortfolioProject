@@ -1,0 +1,66 @@
+<template>
+    <div class="bgcolor">
+        <div class="education-container">
+            
+            <!-- Existing Education Cards -->
+            <template for:each={groupedEducation} for:item="edu">
+                <div key={edu.id} class="education-card">
+                    <span  class="header"> {edu.collegeName} </span>
+                    
+                    <div class="degree-line">
+                        {edu.degree} 
+                    </div>
+                    <span class="dot">♦</span> {edu.year}
+                    <div class="marks-section">
+                        <span class="marks-label">Marks / CGPA:</span>
+                        <span class="marks-value">{edu.marks}</span>
+                    </div>
+
+                    <p class="comment">“{edu.comment}”</p>
+                </div>
+            </template>
+
+            <!-- ✅ Achievements Card -->
+            <div class="education-card">
+                <span  class="header"> Achievements </span>
+                
+                <ul class="bullet-list">
+                <template for:each={achivementList} for:item="achievment">
+                    <!-- <div key={edu.id} class="education-card"> -->
+                        <li key={achievment.Title__c}>{achievment.Title__c} - {achievment.Subtitle__c} <br> {achievment.Description__c} </li>
+                </template>
+                </ul>
+                <!-- <ul class="bullet-list">
+                    <li>Recognized as “Employee of the Month” for outstanding project delivery.</li>
+                    <li>Developed a high-performance Salesforce LWC component used across the org.</li>
+                    <li>Successfully led client demo sessions and improved adoption rate by 30%.</li>
+                </ul> -->
+            </div>
+
+            
+            <div class="education-card">
+                <span  class="header"> Salesforce Certifications </span>
+                <ul class="bullet-list">
+                    <template for:each={salesforceCertificationsList} for:item="sf">
+                        <!-- <div key={edu.id} class="education-card"> -->
+                            <li key={sf.Certification_Name__c}>{sf.Certification_Name__c}  </li>
+                    </template>
+                </ul>
+                
+            </div>
+
+            
+            <div class="education-card">
+                <!-- <h2>Certifications</h2> -->
+                <span  class="header"> Certifications </span>
+                <ul class="bullet-list">
+                    <template for:each={certificationList} for:item="sf">
+                        <!-- <div key={edu.id} class="education-card"> -->
+                            <li key={sf.Title__c}>{sf.Title__c} <br> {sf.Subtitle__c}  </li>
+                    </template>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</template>

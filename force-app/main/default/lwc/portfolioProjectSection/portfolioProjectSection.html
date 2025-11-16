@@ -1,0 +1,27 @@
+<template>
+    <div class="bgcolor">
+    <div class="projects-container">
+        <template for:each={groupedProjects} for:item="proj">
+            <div key={proj.id} class="project-card">
+                <div class="project-header">
+                    <h2>{proj.title}</h2>
+                    <template if:true={proj.link}>
+                        <a href={proj.link} target="_blank" title="View on GitHub">
+                            <!-- <lightning-icon icon-name="utility:link" alternative-text="GitHub" size="small"></lightning-icon> -->
+                            <img class="iconImg" src={githubIcon}>
+                        </a>
+                    </template>
+                </div>
+
+                <p class="project-desc">{proj.description}</p>
+
+                <div class="project-tags">
+                    <template for:each={proj.skills} for:item="skill">
+                        <span key={skill} class="tag">{skill}</span>
+                    </template>
+                </div>
+            </div>
+        </template>
+    </div>
+    </div>
+</template>

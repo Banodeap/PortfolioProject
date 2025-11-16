@@ -1,0 +1,28 @@
+<template>
+    <nav class="navbar">
+        <!-- Brand / Menu Button for Mobile -->
+        <div class="nav-header">
+            <!-- <div class="brand">My Portfolio</div> -->
+             <!-- <template if:true={menuIcon}> -->
+                <!-- <button class="menu-toggle" onclick={toggleMenu}> -->
+                    <div class="menu-toggle">
+                <img src={navbar} alt="Navbar" class="navicon"  onclick={toggleMenu} />
+                    </div>
+            <!-- </button> -->
+             <!-- </template> -->
+            
+        </div>
+
+        <!-- Nav Items -->
+        <div class={menuClass}>
+            <template for:each={navItems} for:item="item">
+                <div key={item.id}
+                    class={item.className}
+                    data-id={item.id}
+                    onclick={handleNavClick}>
+                    {item.label}
+                </div>
+            </template>
+        </div>
+    </nav>
+</template>

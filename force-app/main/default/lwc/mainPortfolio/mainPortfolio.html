@@ -1,0 +1,30 @@
+<template>
+    <div class="">
+        <c-portfolio-header 
+                        onsectionchangehandle={handleSectionChange}>
+        </c-portfolio-header>
+       
+        <template if:true={showHome}>
+            <c-portfolio-about-section></c-portfolio-about-section>
+        </template>
+        <template if:true={showExperience}>
+            <c-portfolio-experience-section></c-portfolio-experience-section>
+        </template>
+        <template if:true={showProject}>
+            <c-portfolio-project-section></c-portfolio-project-section>
+        </template>
+        <template if:true={showSkills}>
+            <c-portfolio-skills-section></c-portfolio-skills-section>
+        </template>
+        <template if:true={showEducationAchivements}>
+            <c-portfolio-education-achievments-section></c-portfolio-education-achievments-section>
+        </template>
+        <template if:true={showContact}>
+            <c-portfolio-contact-section></c-portfolio-contact-section>
+        </template>
+
+        <c-portfolio-footer>
+
+        </c-portfolio-footer>
+    </div>
+</template>

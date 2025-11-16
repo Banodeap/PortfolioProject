@@ -1,0 +1,26 @@
+<template>
+    <div class="bgcolor">
+        <div class="experience-container">
+            <template for:each={groupedExp} for:item="exp">
+                <div key={exp.id} class="experience-card">
+                    <h2>{exp.title} <span class="divider">♦</span> 
+                        <span class="company">{exp.companyName}</span>
+                    </h2>
+                    <p class="subtitle">{exp.subheading} <span class="dot">♦</span> {exp.duration}</p>
+
+                    <ul>
+                        <template for:each={exp.description} for:item="detail">
+                            <li key={detail}>{detail}</li>
+                        </template>
+                    </ul>
+
+                    <div class="tags">
+                        <template for:each={exp.skills} for:item="tag">
+                            <span key={tag} class="tag">{tag}</span>
+                        </template>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+</template>

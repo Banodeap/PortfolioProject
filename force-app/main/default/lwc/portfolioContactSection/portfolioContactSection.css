@@ -1,0 +1,96 @@
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f2f3f6;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.inner-container {
+    border: 2px solid #f8b400;
+    border-radius: 10px;
+    background-color: #f7f8fa;
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    text-align: center;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-weight: 700;
+    color: #E6AF2E;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    text-align: center;
+    font-weight: 600;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    margin: 0.6rem 0;
+    border: 2px solid #ccc;
+    border-radius: 1rem;
+    background-color: #f7f8fa;
+    font-size: 1rem;
+    color: #1F221B;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #E6AF2E;
+    outline: none;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background-color: #E6AF2E;
+    color: #1F221B;
+    padding: 0.8rem;
+    margin-top: 0.8rem;
+    border: none;
+    border-radius: 1.75rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #f8b400;
+}
+
+/* 📱 Small screens */
+@media (max-width: 600px) {
+    .inner-container {
+        padding: 1.5rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    input, textarea, button {
+        font-size: 0.95rem;
+    }
+}
+
+/* 💻 Medium screens */
+@media (max-width: 950px) and (min-width: 600px) {
+    .inner-container {
+        padding: 2rem 3rem;
+    }
+}

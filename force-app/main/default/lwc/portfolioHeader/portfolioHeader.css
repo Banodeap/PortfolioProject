@@ -1,0 +1,84 @@
+.navbar {
+    background-color: #1c1a1a;
+    padding: 0.8rem 1rem;
+    display: flex;
+    flex-direction: column;
+    color: #d3d3d3;
+}
+
+/* Header Row (Brand + Menu Button) */
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #00bcd4;
+}
+
+/* Toggle Button */
+.menu-toggle {
+    background: none;
+    border: none;
+    color: #d3d3d3;
+    cursor: pointer;
+    display: none; /* hidden on desktop */
+}
+
+/* Navigation Menu (Desktop Default) */
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: max-height 0.3s ease;
+}
+
+.nav-item {
+    color: #d3d3d3;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #00bcd4;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-item.active {
+    background-color: #00bcd4;
+    color: white;
+}
+
+/* ===== Mobile Styles ===== */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* show button */
+    }
+
+    .navicon{
+        width: 2rem;
+        height: 2rem;
+    }
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-menu.open {
+        display: flex; /* show on toggle */
+    }
+
+    .nav-item {
+        width: 100%;
+        padding: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}

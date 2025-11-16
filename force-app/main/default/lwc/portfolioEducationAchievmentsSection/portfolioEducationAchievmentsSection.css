@@ -1,0 +1,101 @@
+.bgcolor {
+    background-color: #f2f3f6;
+    padding: 1rem;
+}
+
+/* Responsive grid */
+.education-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* Card base style */
+.education-card {
+    border: 2px solid #f5b300;
+    background-color: #e8e8e8;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.education-card h2 {
+    color: #222;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.degree-line {
+    color: #444;
+    font-size: 1rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+}
+
+.dot {
+    color: #888;
+    margin: 0 5px;
+}
+
+.marks-section {
+    margin: 0.5rem 0;
+}
+
+.marks-label {
+    font-weight: 600;
+    color: #333;
+}
+
+.marks-value {
+    font-weight: 700;
+    color: #f5b300;
+    margin-left: 6px;
+}
+
+.comment {
+    font-style: italic;
+    color: #555;
+    margin-top: 0.8rem;
+    border-left: 3px solid #f5b300;
+    padding-left: 10px;
+}
+
+/* ✅ Bulleted list styling */
+.bullet-list {
+    margin-top: 0.8rem;
+    padding-left: 1.5rem;
+    list-style-type: disc;
+}
+
+.bullet-list li {
+    color: #333;
+    margin-bottom: 0.6rem;
+    line-height: 1.4;
+}
+
+/* Responsive grid behavior */
+@media (min-width: 1024px) {
+    .education-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .education-container {
+        grid-template-columns: 1fr;
+        padding: 0.7rem;
+    }
+}
+
+.header{
+    color: #f5b300;
+    font-size: 1.25rem;
+    font-weight: bold;
+}

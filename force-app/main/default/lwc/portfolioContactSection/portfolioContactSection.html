@@ -1,0 +1,33 @@
+<template>
+   
+    <div class="bgColor">
+        <div class="contact-container">
+            <div class="inner-container">
+                <div class="title">
+                    <h1>Connect with Me !</h1>
+                </div>
+                
+                <div class="subtitle">
+                    <h2>Got a question or proposal, or just want to say hello? Go ahead.</h2>
+                </div>
+                
+                <div class="textfield">
+                    
+                    <input  id="name" name="name" placeholder="Name"  maxlength="100"  size="20" type="text" required/><br>
+                    
+                    <input  id="email" name="email" placeholder="Email" maxlength="100" size="25" type="email" required/><br>
+                    
+                    <input  id="subject" name="subject" placeholder="Subject" maxlength="200"  size="25" type="text" required/><br>
+                </div>
+                <div class="textarea">
+                    
+                    <textarea  id="description" placeholder="Description" maxlength="200" name="description" style="height:100px" required></textarea><br>
+                </div>
+                
+                <div class="button">
+                    <button type="submit" name="submit" onclick={handlesubmit}>Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
